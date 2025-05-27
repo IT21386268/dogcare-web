@@ -560,7 +560,6 @@
                 <div class="team-card">
                     <div class="team-avatar">
                         <img src="assests/6.png" alt="Mendis N. U. P. S." class="team-image">
-                    </div>
      
                     <h3>Gamage T. G. S. N.</h3>
                     <p class="team-role">Group Member</p>
@@ -583,22 +582,22 @@
                 <div class="document-category">
                     <h3><i class="fas fa-file-alt"></i> Research Documents</h3>
                     <div class="document-list">
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadPDF(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Topic Assessment</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadZip(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Project Proposal</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadResearchPaper(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Research Paper</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadFinalReport(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Final Report</span>
                             <i class="fas fa-download"></i>
@@ -614,12 +613,12 @@
                             <span>Project Logbook</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadThesesZip(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Individual Theses</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadFinalThesis(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Final Thesis</span>
                             <i class="fas fa-download"></i>
@@ -645,7 +644,7 @@
                             <span>Progress Presentation 2</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadFinalThesis(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Final Presentation</span>
                             <i class="fas fa-download"></i>
@@ -816,5 +815,72 @@
             font-size: 0.9rem;
         }
     </style>
+    <script>
+        function downloadPDF() {
+            console.log('Download initiated for Topic Assessment PDF.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/Topic Assessment.pdf';
+            link.download = 'Topic Assessment.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for Topic Assessment PDF.');
+        }
+
+        function downloadZip() {
+            console.log('Download initiated for Project proposals.zip.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/Project proposals.zip';
+            link.download = 'Project proposals.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for Project proposals.zip.');
+        }
+
+        function downloadResearchPaper() {
+            console.log('Download initiated for Research paper.pdf.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/Research paper.pdf';
+            link.download = 'Research paper.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for Research paper.pdf.');
+        }
+
+        function downloadFinalReport() {
+            console.log('Download initiated for Final_Research_Report_IT21164262.pdf.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/Individual Thesis/Final_Research_Report_IT21164262.pdf';
+            link.download = 'Final_Research_Report_IT21164262.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for Final_Research_Report_IT21164262.pdf.');
+        }
+
+        function downloadThesesZip() {
+            console.log('Download initiated for theseis.zip.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/Individual Thesis/theseis.zip';
+            link.download = 'theseis.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for theseis.zip.');
+        }
+
+        function downloadFinalThesis() {
+            console.log('Download initiated for Final_Research_Report_IT21164262.pdf.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/presentation.pdf';
+            link.download = 'Final_Research_Report_IT21164262.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for Final_Research_Report_IT21164262.pdf.');
+        }
+    </script>
 </body>
 </html>
