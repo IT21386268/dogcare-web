@@ -556,18 +556,18 @@
                     <p class="team-faculty">Faculty of Computing | Information Technology</p>
                     <p class="team-email">Email: it21190070@my.sliit.lk</p>
                 </div>
-                
-                <div class="team-card">
+                  <div class="team-card">
                     <div class="team-avatar">
-                        <img src="assests/6.png" alt="Mendis N. U. P. S." class="team-image">
-     
+                        <img src="assests/6.png" alt="Gamage T. G. S. N." class="team-image">
+                    </div>
                     <h3>Gamage T. G. S. N.</h3>
                     <p class="team-role">Group Member</p>
                     <p class="team-institution">Sri Lanka Institute of Information Technology</p>
                     <p class="team-faculty">Faculty of Computing | Information Technology</p>
                     <p class="team-email">Email: it21164262@my.sliit.lk</p>
                 </div>
-            </div>
+                
+             
         </div>
     </section>
 
@@ -608,11 +608,7 @@
                 <div class="document-category">
                     <h3><i class="fas fa-book"></i> Documentation</h3>
                     <div class="document-list">
-                        <a href="#" class="document-item">
-                            <i class="fas fa-file-pdf"></i>
-                            <span>Project Logbook</span>
-                            <i class="fas fa-download"></i>
-                        </a>
+                      
                         <a href="#" class="document-item" onclick="downloadThesesZip(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Individual Theses</span>
@@ -629,17 +625,17 @@
                 <div class="document-category">
                     <h3><i class="fas fa-presentation"></i> Presentations</h3>
                     <div class="document-list">
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadFinalThesis(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Project Proposal Presentation</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadFinalThesis(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Progress Presentation 1</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="document-item">
+                        <a href="#" class="document-item" onclick="downloadFinalThesis(); return false;">
                             <i class="fas fa-file-pdf"></i>
                             <span>Progress Presentation 2</span>
                             <i class="fas fa-download"></i>
@@ -653,7 +649,7 @@
                 </div>
             </div>
             <div class="download-all">
-                <a href="#" class="btn btn-primary">
+                <a href="#" class="btn btn-primary" onclick="downloadAllDocuments(); return false;">
                     <i class="fas fa-download"></i>
                     Download All Documents
                 </a>
@@ -880,6 +876,17 @@
             link.click();
             document.body.removeChild(link);
             console.log('Download completed for Final_Research_Report_IT21164262.pdf.');
+        }
+
+        function downloadAllDocuments() {
+            console.log('Download initiated for All.zip.');
+            const link = document.createElement('a');
+            link.href = 'documents for website/All.zip';
+            link.download = 'All.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            console.log('Download completed for All.zip.');
         }
     </script>
 </body>
